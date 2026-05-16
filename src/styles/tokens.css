@@ -1,0 +1,79 @@
+/*
+ * Design tokens — mirrors docs/design/tokens.md.
+ * Always use a semantic role (--color-text-primary), never a swatch.
+ */
+
+:root,
+:root[data-theme="light"] {
+  --color-bg-canvas: #fafafb;
+  --color-bg-surface: #ffffff;
+  --color-bg-surface-2: #f4f4f6;
+  --color-bg-hover: #f0f1f4;
+  --color-bg-selected: #e6f0ff;
+  --color-border-subtle: #e5e7eb;
+  --color-border-strong: #d1d5db;
+  --color-text-primary: #111827;
+  --color-text-secondary: #4b5563;
+  --color-text-tertiary: #6b7280;
+  --color-text-inverse: #ffffff;
+  --color-brand-primary: #1e5eff;
+  --color-brand-hover: #1a52e0;
+  --color-brand-pressed: #1645bd;
+  --color-status-success: #0e9f6e;
+  --color-status-warning: #d97706;
+  --color-status-danger: #dc2626;
+  --color-status-info: #2563eb;
+  --color-status-neutral: #6b7280;
+  --color-focus-ring: #1e5eff;
+
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+
+  --elev-1: 0 1px 2px rgb(0 0 0 / 0.04);
+  --elev-2: 0 4px 12px rgb(0 0 0 / 0.06);
+  --elev-3: 0 12px 32px rgb(0 0 0 / 0.10);
+
+  --motion-fast: 120ms ease-out;
+  --motion-default: 200ms ease-out;
+  --motion-slow: 320ms ease-out;
+
+  --nav-width-expanded: 240px;
+  --nav-width-collapsed: 56px;
+  --header-height: 64px;
+}
+
+:root[data-theme="dark"] {
+  --color-bg-canvas: #0b0d12;
+  --color-bg-surface: #11141b;
+  --color-bg-surface-2: #181c25;
+  --color-bg-hover: #1f2430;
+  --color-bg-selected: #1a2a4a;
+  --color-border-subtle: #232834;
+  --color-border-strong: #313847;
+  --color-text-primary: #f3f4f6;
+  --color-text-secondary: #c9cdd6;
+  --color-text-tertiary: #9aa0ad;
+  --color-text-inverse: #0b0d12;
+  --color-brand-primary: #4d82ff;
+  --color-brand-hover: #6694ff;
+  --color-brand-pressed: #3a6fea;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-fast: 0ms;
+    --motion-default: 0ms;
+    --motion-slow: 0ms;
+  }
+}
