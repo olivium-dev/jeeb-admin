@@ -2,6 +2,7 @@ import {
   Activity,
   BadgeAlert,
   Ban,
+  Banknote,
   CircleDollarSign,
   LayoutDashboard,
   Map,
@@ -62,6 +63,13 @@ export const navItems: NavItem[] = [
     shortcut: "u",
     icon: Users,
     roles: ["users.admin", "superuser"],
+  },
+  {
+    to: "/settlements",
+    label: "Settlements",
+    shortcut: "s",
+    icon: Banknote,
+    roles: ["finance.ops", "superuser"],
   },
   {
     to: "/prohibited-items",

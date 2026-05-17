@@ -12,6 +12,10 @@ import { Placeholder } from "@/pages/Placeholder";
 import { ProhibitedItemsPage } from "@/pages/ProhibitedItems";
 import { KycQueuePage } from "@/pages/KycQueue";
 import { UsersAdminPage } from "@/pages/UsersAdmin";
+import { DisputeQueuePage } from "@/pages/Disputes";
+import { FinanceDashboardPage } from "@/pages/Finance";
+import { OperationsDashboardPage } from "@/pages/Operations";
+import { SettlementManagementPage } from "@/pages/Settlements";
 import { NotFoundPage } from "@/pages/NotFound";
 
 const router = createBrowserRouter([
@@ -38,11 +42,7 @@ const router = createBrowserRouter([
         path: "disputes",
         element: (
           <RequireAuth roles={["disputes.agent", "superuser"]}>
-            <Placeholder
-              title="Disputes"
-              description="Open disputes with full chat + delivery context."
-              ticket="T-web-004"
-            />
+            <DisputeQueuePage />
           </RequireAuth>
         ),
       },
@@ -52,11 +52,7 @@ const router = createBrowserRouter([
           <RequireAuth
             roles={["finance.viewer", "finance.ops", "superuser"]}
           >
-            <Placeholder
-              title="Finance"
-              description="GMV, commission, settlements, reconciliation."
-              ticket="T-web-005"
-            />
+            <FinanceDashboardPage />
           </RequireAuth>
         ),
       },
@@ -64,11 +60,7 @@ const router = createBrowserRouter([
         path: "ops",
         element: (
           <RequireAuth roles={["ops.viewer", "superuser"]}>
-            <Placeholder
-              title="Operations"
-              description="Live ops map and incident heatmap."
-              ticket="T-web-006"
-            />
+            <OperationsDashboardPage />
           </RequireAuth>
         ),
       },
@@ -85,6 +77,14 @@ const router = createBrowserRouter([
         element: (
           <RequireAuth roles={["ops.viewer", "superuser"]}>
             <ProhibitedItemsPage />
+          </RequireAuth>
+        ),
+      },
+      {
+        path: "settlements",
+        element: (
+          <RequireAuth roles={["finance.ops", "superuser"]}>
+            <SettlementManagementPage />
           </RequireAuth>
         ),
       },
