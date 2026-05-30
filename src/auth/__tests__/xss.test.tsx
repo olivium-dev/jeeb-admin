@@ -22,10 +22,9 @@ import * as api from "../api";
 import { AuthError } from "../api";
 
 const here = dirname(fileURLToPath(import.meta.url));
-const PAYLOADS_PATH = resolve(
-  here,
-  "../../../../jeeb-mobile/qa/security/fixtures/xss-payloads.txt",
-);
+// Fixture is vendored into this repo (was a broken cross-repo path into a
+// sibling jeeb-mobile checkout that does not exist in CI).
+const PAYLOADS_PATH = resolve(here, "./fixtures/xss-payloads.txt");
 
 const payloads = readFileSync(PAYLOADS_PATH, "utf8")
   .split("\n")

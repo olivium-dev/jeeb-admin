@@ -11,6 +11,7 @@ describe("navItems", () => {
       "Finance",
       "Operations",
       "Users",
+      "Settlements",
       "Prohibited items",
       "Audit log",
     ]);
